@@ -21,8 +21,6 @@ musicas = [("Aquele Abraco", 0, 100),
 compBandas :: [String]
 compBandas = map (\x -> intercalate ", " x) bandas
 
-nomeMusica = map (\(x,_,_) -> x) musicas
-
 idxMusica :: Musica -> String
 idxMusica (x,_,_) = x
 
@@ -45,7 +43,7 @@ duracao :: [String]
 duracao = map show dur
 
 pretty_print :: [Musica] -> [String] -> [String] -> IO ()
-pretty_print [] [] [] = return () 
+pretty_print [] [] [] = return ()
 pretty_print (l:ls) (l1:l1s) (l2:l2s) = do putStrLn $ "Nome: "++(idxMusica(l))
                                            putStrLn $ "Autor(es): "++(l1)
                                            putStrLn $ "Duracao: "++(l2)++"\n"
