@@ -31,4 +31,4 @@ compra = foldr (+) 0 (map (\(_,_,_,w) -> w) livraria)
 
 main = do print pesquisa
           print barato
-          print compra
+          putStrLn $ "R$: "++ show(compra)
