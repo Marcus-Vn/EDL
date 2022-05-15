@@ -6,7 +6,6 @@ def particao(array, inicio, fim):
     high = fim
 
     while True:
-
         while low <= high and array[high] >= pivo:
             high = high - 1
         while low <= high and array[low] <= pivo:
@@ -19,8 +18,7 @@ def particao(array, inicio, fim):
     array[inicio], array[high] = array[high], array[inicio]
 
     return high
-
-#Algoritmo recursivo
+#Algoritmo
 def quick_sort(array, inicio, fim):
     if inicio >= fim:
         return
@@ -31,6 +29,5 @@ def quick_sort(array, inicio, fim):
 
 #Exemplo
 array = [9,2,3,4,11,13,8,5,1,14,6,10,15,7,12]
-
 quick_sort(array, 0, len(array) - 1)
 print(array)
