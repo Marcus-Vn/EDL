@@ -9,10 +9,8 @@ def particao(array, inicio, fim):
 
         while low <= high and array[high] >= pivo:
             high = high - 1
-
         while low <= high and array[low] <= pivo:
             low = low + 1
-
         if low <= high:
             array[low], array[high] = array[high], array[low]
         else:
